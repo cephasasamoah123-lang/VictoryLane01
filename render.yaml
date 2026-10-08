@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: victorylane            # change back to life-goes-on-hub-api only if you are updating that existing service
+    runtime: docker
+    rootDir: .
+    dockerfilePath: ./server/Dockerfile
+    healthCheckPath: /api/health
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: PORT
+        value: "5000"            # matches ASPNETCORE_URLS in the Dockerfile
+      - key: ConnectionStrings__DefaultConnection
+        sync: false
+      - key: Jwt__Secret
+        generateValue: true
+      - key: Admin__Email
+        sync: false
+      - key: Admin__Password
+        sync: false
+      - key: Cloudinary__CloudName
+        sync: false
+      - key: Cloudinary__ApiKey
+        sync: false
+      - key: Cloudinary__ApiSecret
+        sync: false
+      - key: Gemini__ApiKey
+        sync: false
+      - key: Paystack__SecretKey
+        sync: false
+      - key: VITE_PAYSTACK_PUBLIC_KEY   # public key only (pk_...), used at build time
+        sync: false

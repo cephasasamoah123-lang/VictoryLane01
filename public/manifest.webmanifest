@@ -1,0 +1,17 @@
+{
+  "name": "Victory Lane",
+  "short_name": "Victory Lane",
+  "description": "Shop fashion, shoes, suits, watches, and accessories from Victory Lane.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f9f7f3",
+  "theme_color": "#173b2e",
+  "icons": [
+    {
+      "src": "/icons/victory-lane-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

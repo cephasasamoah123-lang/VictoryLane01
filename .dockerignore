@@ -1,0 +1,15 @@
+.git
+.git/**
+node_modules
+**/node_modules
+dist
+**/dist
+server/bin
+server/obj
+**/bin
+**/obj
+.env
+.env.*
+server/appsettings.Development.json
+server/appsettings.Production.json
+.vscode
